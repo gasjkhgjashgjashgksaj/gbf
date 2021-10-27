@@ -1,0 +1,3 @@
+  const main = () => {
+    setTimeout(start, 1000)
+  }
