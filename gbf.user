@@ -1,3 +1,37 @@
+// ==UserScript==
+// @name         TEST
+// @namespace    https://gist.github.com/gasjkhgjashgjashgksaj
+// @version      0.1
+// @description  AAXX
+// @author       gasjkhgjashgjashgksaj
+// ==/UserScript==
+
+(function () {
+  'use strict'
+  const isEriri = URL.includes('eriri')
+  const isGbfLife = URL.includes('gbf.life')
+
+  let timer
+  let lastid
+
+  const start = () => {
+    window.onload = function()
+    {
+    　// 右クリックの処理
+      document.body.addEventListener('contextmenu',function(e)
+      {
+        scrollBy(0, 200);
+      });
+    }
+  }
+
   const main = () => {
     setTimeout(start, 1000)
   }
+
+  if (window.unsafeWindow) {
+    unsafeWindow.addEventListener('load', main)
+  } else {
+    window.addEventListener('load', main)
+  }
+})()
